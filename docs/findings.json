@@ -1,0 +1,248 @@
+[
+  {
+    "name": "Marcus Reid",
+    "scenario": "Recently Married - Updated Nothing",
+    "findings": [
+      {
+        "severity": "HIGH",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "L1",
+        "issue": "Recently married but spouse not named on any account",
+        "consequence": "Your new spouse has no legal claim to any of your registered accounts. In most provinces marriage does not automatically update beneficiary designations. If you die tomorrow your spouse may receive nothing from your investment accounts.",
+        "action": "Review and update all account designations to reflect your marriage. Update your will at the same time."
+      },
+      {
+        "severity": "HIGH",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "L0",
+        "issue": "No will on file",
+        "consequence": "Without a will, provincial intestacy rules decide who gets everything \u2014 not you. For clients with children this also means no guardian is formally named. The courts decide. Registered accounts with named beneficiaries bypass this, but everything else does not.",
+        "action": "Create a will as soon as possible. This is especially urgent if you have children, a common-law partner, or significant non-registered assets."
+      },
+      {
+        "severity": "HIGH",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "C2",
+        "issue": "Beneficiaries named on some accounts but missing on others: TFSA, FHSA, non-registered",
+        "consequence": "Creates a two-tier distribution. Some accounts transfer quickly and tax-efficiently to your named beneficiaries. The undesignated accounts go through probate \u2014 slower, more expensive, and in the case of registered accounts, with full tax exposure.",
+        "action": "Complete beneficiary designations on: TFSA, FHSA, non-registered."
+      },
+      {
+        "severity": "MEDIUM",
+        "account_id": "WS-RRSP-001",
+        "account_type": "RRSP",
+        "rule": "C6",
+        "issue": "No contingent beneficiary named on RRSP",
+        "consequence": "If your primary beneficiary dies before you and the designation is not updated, the full RRSP value collapses into your estate \u2014 maximum tax exposure and probate delays.",
+        "action": "Name a contingent beneficiary. On an RRSP this is especially important given the tax consequences of the account entering the estate."
+      }
+    ]
+  },
+  {
+    "name": "Sandra Kowalski",
+    "scenario": "Recently Divorced - Updated Nothing",
+    "findings": [
+      {
+        "severity": "CRITICAL",
+        "account_id": "WS-TFSA-002",
+        "account_type": "TFSA",
+        "rule": "T3",
+        "issue": "Successor holder on TFSA is an ex-spouse",
+        "consequence": "Ex-spouse legally inherits the entire TFSA tax-free and immediately upon death. Divorce does not remove this automatically. Your will cannot override it. There is no recovery once it happens.",
+        "action": "Update successor holder immediately. This is the single most urgent fix in your estate plan."
+      },
+      {
+        "severity": "CRITICAL",
+        "account_id": "WS-RRSP-002",
+        "account_type": "RRSP",
+        "rule": "R3",
+        "issue": "Ex-spouse still listed as successor annuitant on RRSP",
+        "consequence": "Ex-spouse legally receives the entire RRSP. This is ironclad \u2014 your will cannot override it, courts will generally not override it. The ex-spouse keeps the money. Divorce does not automatically remove this designation.",
+        "action": "Update this immediately. This is the highest priority fix for any recently divorced client."
+      },
+      {
+        "severity": "CRITICAL",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "L2",
+        "issue": "Recently divorced but ex-spouse still named on one or more accounts",
+        "consequence": "Divorce does NOT automatically remove beneficiary designations in Canada. Your ex-spouse will legally inherit every account still named in their favour. Your will cannot override this. This is the most common and costly estate planning mistake Canadians make.",
+        "action": "Treat this as an emergency. Update every account designation today. Do not wait."
+      },
+      {
+        "severity": "HIGH",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "C2",
+        "issue": "Beneficiaries named on some accounts but missing on others: non-registered",
+        "consequence": "Creates a two-tier distribution. Some accounts transfer quickly and tax-efficiently to your named beneficiaries. The undesignated accounts go through probate \u2014 slower, more expensive, and in the case of registered accounts, with full tax exposure.",
+        "action": "Complete beneficiary designations on: non-registered."
+      },
+      {
+        "severity": "MEDIUM",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "L5",
+        "issue": "Common-law partner of 22 months not named on any account",
+        "consequence": "Your common-law partner qualifies for the same tax advantages as a married spouse in Canada \u2014 but only if properly designated. Without any designation they receive nothing from your registered accounts.",
+        "action": "Update designations to reflect your common-law relationship. Note that common-law rules vary by province \u2014 confirm your province's definition applies to your situation."
+      }
+    ]
+  },
+  {
+    "name": "Aisha Okonkwo",
+    "scenario": "New Parent - Designations Predate the Child",
+    "findings": [
+      {
+        "severity": "HIGH",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "L0",
+        "issue": "No will on file",
+        "consequence": "Without a will, provincial intestacy rules decide who gets everything \u2014 not you. For clients with children this also means no guardian is formally named. The courts decide. Registered accounts with named beneficiaries bypass this, but everything else does not.",
+        "action": "Create a will as soon as possible. This is especially urgent if you have children, a common-law partner, or significant non-registered assets."
+      },
+      {
+        "severity": "HIGH",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "C2",
+        "issue": "Beneficiaries named on some accounts but missing on others: non-registered",
+        "consequence": "Creates a two-tier distribution. Some accounts transfer quickly and tax-efficiently to your named beneficiaries. The undesignated accounts go through probate \u2014 slower, more expensive, and in the case of registered accounts, with full tax exposure.",
+        "action": "Complete beneficiary designations on: non-registered."
+      },
+      {
+        "severity": "MEDIUM",
+        "account_id": null,
+        "account_type": "TFSA",
+        "rule": "C6",
+        "issue": "No contingent beneficiary named on TFSA",
+        "consequence": "If your primary beneficiary dies before you and you have not updated the designation, the account falls to your estate. A contingent beneficiary is a backup that prevents this automatically.",
+        "action": "Name a contingent beneficiary on this account. Common choices are adult children, a sibling, or a trusted person."
+      },
+      {
+        "severity": "MEDIUM",
+        "account_id": "WS-RRSP-003",
+        "account_type": "RRSP",
+        "rule": "R4",
+        "issue": "Non-spouse (brother) named as RRSP beneficiary \u2014 significant tax consequence",
+        "consequence": "Your brother receives the full RRSP value but it is added entirely to their income that year. On this account balance of $88,700 they could owe $35,480+ in taxes the same year they receive it. This is often a complete surprise.",
+        "action": "Make sure your beneficiary understands this tax consequence. Consider life insurance as a strategy to cover the tax bill, or review whether this designation still reflects your intent."
+      },
+      {
+        "severity": "MEDIUM",
+        "account_id": "WS-RRSP-003",
+        "account_type": "RRSP",
+        "rule": "C6",
+        "issue": "No contingent beneficiary named on RRSP",
+        "consequence": "If your primary beneficiary dies before you and the designation is not updated, the full RRSP value collapses into your estate \u2014 maximum tax exposure and probate delays.",
+        "action": "Name a contingent beneficiary. On an RRSP this is especially important given the tax consequences of the account entering the estate."
+      }
+    ]
+  },
+  {
+    "name": "Gerald Whitmore",
+    "scenario": "Elderly Client - Everything is Outdated",
+    "findings": [
+      {
+        "severity": "CRITICAL",
+        "account_id": "WS-TFSA-004",
+        "account_type": "TFSA",
+        "rule": "T6",
+        "issue": "Successor holder on TFSA is deceased",
+        "consequence": "The designation has failed. The account will fall into your estate as if no successor holder was ever named \u2014 probate applies, tax-free status is lost on post-death growth.",
+        "action": "Name a new successor holder immediately. Consider adding a contingent beneficiary as a backup."
+      },
+      {
+        "severity": "CRITICAL",
+        "account_id": "WS-RRIF-004",
+        "account_type": "RRIF",
+        "rule": "R6",
+        "issue": "Successor annuitant on RRIF is deceased",
+        "consequence": "The designation has failed. The full RRIF balance collapses into your estate as income in the year of death. On large RRIFs this can mean a six-figure tax bill with no liquid assets to pay it.",
+        "action": "Update successor annuitant immediately. Review whether your estate has enough liquid assets to cover the potential tax liability."
+      },
+      {
+        "severity": "CRITICAL",
+        "account_id": "WS-RRIF-004",
+        "account_type": "RRIF",
+        "rule": "R6",
+        "issue": "Primary beneficiary on RRIF is deceased",
+        "consequence": "Designation has failed. Full RRIF value enters estate as taxable income in year of death. With no liquid assets to cover the bill, the executor may be forced to sell other estate assets.",
+        "action": "Update beneficiary immediately. Given the size of most RRIFs, also review estate liquidity \u2014 is there enough cash outside this account to pay the tax bill?"
+      },
+      {
+        "severity": "HIGH",
+        "account_id": "WS-RRIF-004",
+        "account_type": "RRIF",
+        "rule": "R7",
+        "issue": "Large RRIF with insufficient liquid assets to cover potential estate tax bill",
+        "consequence": "This RRIF is worth $312,000. If it collapses into the estate, the tax bill could reach $124,800+. Your non-registered assets total only $28,400 \u2014 potentially not enough to cover it. The executor may be forced to sell assets or borrow.",
+        "action": "Review estate liquidity with a financial advisor. Life insurance is often used specifically to fund this tax liability."
+      },
+      {
+        "severity": "HIGH",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "C2",
+        "issue": "Beneficiaries named on some accounts but missing on others: non-registered",
+        "consequence": "Creates a two-tier distribution. Some accounts transfer quickly and tax-efficiently to your named beneficiaries. The undesignated accounts go through probate \u2014 slower, more expensive, and in the case of registered accounts, with full tax exposure.",
+        "action": "Complete beneficiary designations on: non-registered."
+      },
+      {
+        "severity": "MEDIUM",
+        "account_id": "WS-RRIF-004",
+        "account_type": "RRIF",
+        "rule": "C6",
+        "issue": "No contingent beneficiary named on RRIF",
+        "consequence": "If primary beneficiary predeceases you and designation is not updated, the full RRIF value enters your estate as taxable income. The stakes on a RRIF are higher than most accounts given the tax exposure.",
+        "action": "Name a contingent beneficiary on this account as a permanent safety net."
+      },
+      {
+        "severity": "MEDIUM",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "L0",
+        "issue": "Will has not been updated in 22 years",
+        "consequence": "A will that predates major life events \u2014 marriage, divorce, children, significant assets \u2014 may no longer reflect your wishes. Named executors or beneficiaries in the will may have died or become estranged.",
+        "action": "Review your will with an estate lawyer. At minimum confirm the executor is still willing and able, and that the beneficiaries still reflect your wishes."
+      }
+    ]
+  },
+  {
+    "name": "Tyler Park",
+    "scenario": "Young Person - Never Set Anything Up",
+    "findings": [
+      {
+        "severity": "CRITICAL",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "C5",
+        "issue": "No beneficiary named on any account \u2014 complete estate planning gap",
+        "consequence": "Your entire investment portfolio will go through probate. Maximum tax exposure on all registered accounts. Maximum delays for your family. Everything becomes public record through probate court. This is the worst possible estate planning outcome.",
+        "action": "This requires immediate attention across every account. Start with your RRSP or RRIF \u2014 the tax consequences there are the most severe."
+      },
+      {
+        "severity": "HIGH",
+        "account_id": "WS-RRSP-005",
+        "account_type": "RRSP",
+        "rule": "R1",
+        "issue": "No beneficiary or successor annuitant named on RRSP",
+        "consequence": "Full RRSP value is added to your income in the year of death. On a $200,000 RRSP this could mean $80,000-$100,000 in unexpected taxes. Account also enters probate \u2014 delays and additional costs on top of the tax hit.",
+        "action": "If married or common-law: name your spouse as successor annuitant immediately. If single: name a beneficiary. Either is far better than nothing."
+      },
+      {
+        "severity": "HIGH",
+        "account_id": null,
+        "account_type": "ALL",
+        "rule": "L0",
+        "issue": "No will on file",
+        "consequence": "Without a will, provincial intestacy rules decide who gets everything \u2014 not you. For clients with children this also means no guardian is formally named. The courts decide. Registered accounts with named beneficiaries bypass this, but everything else does not.",
+        "action": "Create a will as soon as possible. This is especially urgent if you have children, a common-law partner, or significant non-registered assets."
+      }
+    ]
+  }
+]
