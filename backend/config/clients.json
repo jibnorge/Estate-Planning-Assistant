@@ -1,0 +1,399 @@
+{
+  "clients": [
+
+    {
+      "_profile_id": "P001",
+      "_scenario": "Recently Married - Updated Nothing",
+      "_problems": [
+        "RRSP still names ex-girlfriend as beneficiary (CRITICAL - Rule R3)",
+        "TFSA has no beneficiary at all (HIGH - Rule T1)",
+        "FHSA has no beneficiary (HIGH)",
+        "New spouse not designated anywhere (HIGH - Rule L1)",
+        "No contingent beneficiary on any account (MEDIUM - Rule C6)"
+      ],
+      "client": {
+        "name": "Marcus Reid",
+        "age": 31,
+        "province": "Ontario",
+        "marital_status": "married",
+        "marriage_date": "2025-09-20",
+        "spouse": {
+          "name": "Priya Reid",
+          "relationship": "spouse",
+          "common_law_start": null
+        },
+        "children": [],
+        "has_will": false,
+        "will_last_updated": null,
+        "accounts": [
+          {
+            "type": "TFSA",
+            "account_id": "WS-TFSA-001",
+            "balance": 38500,
+            "opened": "2018-06-01",
+            "successor_holder": null,
+            "beneficiary_primary": null,
+            "beneficiary_contingent": null,
+            "notes": "Opened when single, never set up a beneficiary"
+          },
+          {
+            "type": "RRSP",
+            "account_id": "WS-RRSP-001",
+            "balance": 54200,
+            "opened": "2020-03-15",
+            "successor_annuitant": null,
+            "beneficiary_primary": {
+              "name": "Jessica Tran",
+              "relationship": "ex-girlfriend",
+              "designated": "2020-03-15",
+              "is_spouse_at_designation": false
+            },
+            "beneficiary_contingent": null,
+            "notes": "Named ex-girlfriend at account opening, relationship ended 2023, never updated"
+          },
+          {
+            "type": "FHSA",
+            "account_id": "WS-FHSA-001",
+            "balance": 16000,
+            "opened": "2023-07-01",
+            "beneficiary_primary": null,
+            "beneficiary_contingent": null,
+            "notes": "Opened to save for home purchase, skipped beneficiary step during onboarding"
+          },
+          {
+            "type": "non-registered",
+            "account_id": "WS-NR-001",
+            "balance": 12300,
+            "opened": "2021-11-20",
+            "beneficiary_primary": null,
+            "notes": "Non-registered - passes through estate by default"
+          }
+        ]
+      }
+    },
+
+    {
+      "_profile_id": "P002",
+      "_scenario": "Recently Divorced - Updated Nothing",
+      "_problems": [
+        "Ex-husband still named as RRSP successor annuitant (CRITICAL - Rule R3)",
+        "Ex-husband still named as TFSA successor holder (CRITICAL - Rule T3)",
+        "New common-law partner of 14 months not designated anywhere (MEDIUM - Rule L5)",
+        "No contingent beneficiary anywhere (MEDIUM - Rule C6)",
+        "Will predates divorce and names ex-husband as executor (HIGH)"
+      ],
+      "client": {
+        "name": "Sandra Kowalski",
+        "age": 44,
+        "province": "British Columbia",
+        "marital_status": "divorced",
+        "divorce_finalized": "2024-02-10",
+        "separation_date": "2023-06-01",
+        "current_partner": {
+          "name": "Tom Nguyen",
+          "relationship": "common-law",
+          "cohabitation_start": "2024-04-15",
+          "months_together": 14
+        },
+        "children": [
+          {
+            "name": "Lily Kowalski",
+            "age": 16,
+            "is_minor": true,
+            "biological_parent": "ex-husband"
+          }
+        ],
+        "has_will": true,
+        "will_last_updated": "2019-05-12",
+        "will_executor": "ex-husband (outdated)",
+        "accounts": [
+          {
+            "type": "TFSA",
+            "account_id": "WS-TFSA-002",
+            "balance": 67800,
+            "opened": "2015-01-10",
+            "successor_holder": {
+              "name": "Robert Kowalski",
+              "relationship": "ex-husband",
+              "designated": "2015-01-10",
+              "is_currently_spouse": false
+            },
+            "beneficiary_primary": null,
+            "beneficiary_contingent": null,
+            "notes": "Successor holder set at account opening when married, never updated after divorce"
+          },
+          {
+            "type": "RRSP",
+            "account_id": "WS-RRSP-002",
+            "balance": 198400,
+            "opened": "2010-04-22",
+            "successor_annuitant": {
+              "name": "Robert Kowalski",
+              "relationship": "ex-husband",
+              "designated": "2010-04-22",
+              "is_currently_spouse": false
+            },
+            "beneficiary_primary": null,
+            "beneficiary_contingent": null,
+            "notes": "Set 15 years ago, never reviewed - worth nearly $200K"
+          },
+          {
+            "type": "non-registered",
+            "account_id": "WS-NR-002",
+            "balance": 45100,
+            "opened": "2017-08-30",
+            "beneficiary_primary": null,
+            "notes": "Goes through estate, which is governed by an outdated will naming ex-husband as executor"
+          }
+        ]
+      }
+    },
+
+    {
+      "_profile_id": "P003",
+      "_scenario": "New Parent - Designations Predate the Child",
+      "_problems": [
+        "TFSA beneficiary is client's parents - child gets nothing (MEDIUM - Rule T7)",
+        "RRSP beneficiary is sibling - massive tax surprise for sibling (MEDIUM-HIGH - Rule R4)",
+        "Newborn not named anywhere across any account (MEDIUM - Rule L3)",
+        "Minor child named on RESP but no guardian/trustee designated (MEDIUM - Rule T5 analog)",
+        "No will at all - no guardian named for the child (HIGH)",
+        "No contingent beneficiary on any account (MEDIUM - Rule C6)"
+      ],
+      "client": {
+        "name": "Aisha Okonkwo",
+        "age": 34,
+        "province": "Alberta",
+        "marital_status": "married",
+        "marriage_date": "2021-07-03",
+        "spouse": {
+          "name": "James Okonkwo",
+          "relationship": "spouse"
+        },
+        "children": [
+          {
+            "name": "Noah Okonkwo",
+            "age_months": 7,
+            "is_minor": true,
+            "birth_date": "2025-07-18"
+          }
+        ],
+        "has_will": false,
+        "will_last_updated": null,
+        "notes": "No will - means no guardian formally named for Noah if both parents die",
+        "accounts": [
+          {
+            "type": "TFSA",
+            "account_id": "WS-TFSA-003",
+            "balance": 29600,
+            "opened": "2016-09-01",
+            "successor_holder": {
+              "name": "James Okonkwo",
+              "relationship": "spouse",
+              "designated": "2021-08-15",
+              "is_currently_spouse": true
+            },
+            "beneficiary_primary": {
+              "name": "Grace Okonkwo",
+              "relationship": "mother",
+              "designated": "2016-09-01"
+            },
+            "beneficiary_contingent": null,
+            "notes": "Successor holder is spouse (good). But contingent beneficiary is her mother, set before marriage. Noah not mentioned anywhere."
+          },
+          {
+            "type": "RRSP",
+            "account_id": "WS-RRSP-003",
+            "balance": 88700,
+            "opened": "2019-02-14",
+            "successor_annuitant": null,
+            "beneficiary_primary": {
+              "name": "Emeka Okonkwo",
+              "relationship": "brother",
+              "designated": "2019-02-14"
+            },
+            "beneficiary_contingent": null,
+            "notes": "Named brother before getting married. Spouse not updated as successor annuitant. Brother would receive ~$88K and owe potentially $35K+ in taxes that year."
+          },
+          {
+            "type": "RESP",
+            "account_id": "WS-RESP-003",
+            "balance": 5200,
+            "opened": "2025-09-01",
+            "subscriber": "Aisha Okonkwo",
+            "beneficiary_primary": {
+              "name": "Noah Okonkwo",
+              "relationship": "child",
+			  "is_minor": true,
+              "designated": "2025-09-01"
+            },
+            "notes": "Correctly set up for Noah. But if Aisha dies, the subscriber transfer rules kick in - James needs to be named as successor subscriber."
+          },
+          {
+            "type": "non-registered",
+            "account_id": "WS-NR-003",
+            "balance": 17800,
+            "opened": "2022-05-10",
+            "beneficiary_primary": null,
+            "notes": "Falls to estate. With no will, intestacy rules apply - in Alberta this distributes to spouse and children by formula, not by intent."
+          }
+        ]
+      }
+    },
+
+    {
+      "_profile_id": "P004",
+      "_scenario": "Elderly Client - Everything is Outdated",
+      "_problems": [
+        "RRIF beneficiary is a deceased spouse - designation fails, falls to estate (CRITICAL - Rule T6 analog)",
+        "TFSA successor holder is deceased spouse (CRITICAL)",
+        "Secondary beneficiary is a deceased sibling (HIGH - Rule T6)",
+        "Will is 22 years old and names people who have since died (HIGH)",
+        "No contingent beneficiaries anywhere (MEDIUM)",
+        "Large RRIF with no liquid assets to cover tax - estate liquidity crisis (HIGH - Rule R7)",
+        "Adult disabled son not set up as RRSP/RRIF rollover beneficiary - missing tax benefit (HIGH - Rule R5)"
+      ],
+      "client": {
+        "name": "Gerald Whitmore",
+        "age": 78,
+        "province": "Ontario",
+        "marital_status": "widowed",
+        "spouse_death_date": "2023-11-04",
+        "children": [
+          {
+            "name": "Patricia Whitmore",
+            "age": 52,
+            "is_minor": false,
+            "is_financially_dependent": false
+          },
+          {
+            "name": "Daniel Whitmore",
+            "age": 48,
+            "is_minor": false,
+            "is_financially_dependent": true,
+            "dependency_reason": "Permanent disability - schizophrenia diagnosis 2001"
+          }
+        ],
+        "has_will": true,
+        "will_last_updated": "2003-06-18",
+        "will_executor": "Harold Whitmore (brother - deceased 2019)",
+        "notes": "Has not revisited any financial or legal documents since wife's death. Daughter Patricia has been trying to help but Gerald is resistant to change.",
+        "accounts": [
+          {
+            "type": "TFSA",
+            "account_id": "WS-TFSA-004",
+            "balance": 41200,
+            "opened": "2009-01-02",
+            "successor_holder": {
+              "name": "Eleanor Whitmore",
+              "relationship": "spouse - deceased",
+              "designated": "2009-01-02",
+              "is_currently_alive": false,
+              "death_date": "2023-11-04"
+            },
+            "beneficiary_primary": null,
+            "beneficiary_contingent": null,
+            "notes": "Successor holder died. No backup. Account will fall entirely to estate - probate, loss of tax-free status on post-death growth."
+          },
+          {
+            "type": "RRIF",
+            "account_id": "WS-RRIF-004",
+            "balance": 312000,
+            "opened": "2016-01-01",
+            "converted_from_rrsp": true,
+            "successor_annuitant": {
+              "name": "Eleanor Whitmore",
+              "relationship": "spouse - deceased",
+              "designated": "2016-01-01",
+              "is_currently_alive": false,
+              "death_date": "2023-11-04"
+            },
+            "beneficiary_primary": {
+              "name": "Harold Whitmore",
+              "relationship": "brother - deceased",
+              "designated": "2016-01-01",
+              "is_currently_alive": false,
+              "death_date": "2019-08-22"
+            },
+            "beneficiary_contingent": null,
+            "minimum_annual_withdrawal": 18720,
+            "notes": "Both designations are dead. Full $312K collapses into estate as income in year of Gerald's death. Patricia and Daniel could face a $120K+ tax bill on an estate that is mostly illiquid registered assets. Daniel's disability status would have allowed a much more favorable rollover - this opportunity is now at risk."
+          },
+          {
+            "type": "non-registered",
+            "account_id": "WS-NR-004",
+            "balance": 28400,
+            "opened": "2005-03-30",
+            "beneficiary_primary": null,
+            "notes": "Only liquid non-registered asset. May not be enough to cover RRIF tax liability on estate."
+          }
+        ]
+      }
+    },
+
+    {
+      "_profile_id": "P005",
+      "_scenario": "Young Person - Never Set Anything Up",
+      "_problems": [
+        "TFSA opened 4 years ago, zero beneficiary setup (HIGH - Rule T1)",
+        "RRSP opened 2 years ago, zero beneficiary setup (HIGH - Rule R1)",
+        "FHSA opened recently, zero beneficiary setup (HIGH)",
+        "No will at all (informational)",
+        "No contingent beneficiary concept even considered (MEDIUM - Rule C6)",
+        "C5 - complete gap across all accounts (CRITICAL)"
+      ],
+      "client": {
+        "name": "Tyler Park",
+        "age": 26,
+        "province": "Manitoba",
+        "marital_status": "single",
+        "in_relationship": true,
+        "partner": {
+          "name": "Casey Lam",
+          "relationship": "girlfriend",
+          "cohabitation_start": null,
+          "months_living_together": 0,
+          "notes": "Dating 8 months, not living together - not a common-law partner yet"
+        },
+        "children": [],
+        "has_will": false,
+        "will_last_updated": null,
+        "accounts": [
+          {
+            "type": "TFSA",
+            "account_id": "WS-TFSA-005",
+            "balance": 14800,
+            "opened": "2021-04-12",
+            "successor_holder": null,
+            "beneficiary_primary": null,
+            "beneficiary_contingent": null,
+            "notes": "Skipped beneficiary step during app onboarding - thought he could do it later, never did"
+          },
+          {
+            "type": "RRSP",
+            "account_id": "WS-RRSP-005",
+            "balance": 8200,
+            "opened": "2023-02-28",
+            "successor_annuitant": null,
+            "beneficiary_primary": null,
+            "beneficiary_contingent": null,
+            "notes": "Opened to get employer RRSP match. Beneficiary page felt irrelevant at age 24 - skipped it."
+          },
+          {
+            "type": "FHSA",
+            "account_id": "WS-FHSA-005",
+            "balance": 11000,
+            "opened": "2024-03-15",
+            "beneficiary_primary": null,
+            "beneficiary_contingent": null,
+            "notes": "Newest account, saving for a condo. Zero estate setup."
+          }
+        ],
+        "intestacy_outcome_if_dies_today": {
+          "note": "With no will and no beneficiaries named, Manitoba intestacy rules apply. All assets go to his parents equally. Girlfriend Casey gets nothing. His TFSA, RRSP, and FHSA all collapse into estate income, generating a tax bill that his parents inherit alongside the assets."
+        }
+      }
+    }
+
+  ]
+}
