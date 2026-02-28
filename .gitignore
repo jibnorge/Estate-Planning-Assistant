@@ -1,0 +1,6 @@
+# ENV Files
+__pycache__/
+xat/
+
+# Confidential Files
+backend/config/api.txt
