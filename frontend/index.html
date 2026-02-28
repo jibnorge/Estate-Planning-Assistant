@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estate Planning Assistant — Vesta </title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- ═══════════════════════════════════
+         TOPBAR
+    ════════════════════════════════════ -->
+    <header class="topbar">
+      <div class="topbar-brand">
+        <div class="topbar-logo"></div>
+        <div class="topbar-name">Vesta <span>/ Estate Planning</span></div>
+      </div>
+      <div class="topbar-client">
+        <select id="clientSelect" onchange="switchClient()">
+          <option value="0">Marcus Reid</option>
+          <option value="1" selected>Sandra Kowalski</option>
+          <option value="2">Aisha Okonkwo</option>
+          <option value="3">Gerald Whitmore</option>
+          <option value="4">Tyler Park</option>
+        </select>
+        <div class="client-avatar" id="clientInitials">SK</div>
+        <div class="client-name-label" id="clientNameLabel">Sandra Kowalski</div>
+      </div>
+    </header>
+
+
+    <!-- ═══════════════════════════════════
+         LEFT PANEL — Account Overview
+    ════════════════════════════════════ -->
+    <aside class="left-panel">
+
+      <div class="panel-header">
+        <div class="panel-title">Account Overview</div>
+        <div class="panel-subtitle" id="panelSubtitle">Loading analysis...</div>
+      </div>
+
+      <div class="accounts-list" id="accountsList"></div>
+
+      <div class="summary-strip">
+        <div class="summary-item">
+          <div class="summary-count critical" id="countCritical">0</div>
+          <div class="summary-label">Critical</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-count high" id="countHigh">0</div>
+          <div class="summary-label">High</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-count medium" id="countMedium">0</div>
+          <div class="summary-label">Medium</div>
+        </div>
+      </div>
+
+    </aside>
+
+
+    <!-- ═══════════════════════════════════
+         RIGHT PANEL — Chat
+    ════════════════════════════════════ -->
+    <main class="right-panel">
+
+      <!-- Hard stop banner -->
+      <div class="hard-stop-banner">
+        <div class="banner-icon">i</div>
+        <div class="banner-text">
+          I can analyze and explain — I cannot make changes on your behalf.
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div class="messages-area" id="messagesArea">
+        <div class="empty-state" id="emptyState">
+          <div class="empty-glyph">§</div>
+          <div class="empty-text">
+            Ask about your accounts<br/>
+            Your estate. Your family. Your terms.
+          </div>
+        </div>
+      </div>
+
+      <!-- Input -->
+      <div class="input-area">
+        <div class="input-wrapper">
+          <textarea
+            class="chat-input"
+            id="chatInput"
+            placeholder="Ask about your estate plan..."
+            rows="1"
+            onkeydown="handleKey(event)"
+            oninput="autoResize(this)"
+          ></textarea>
+          <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <div class="input-hint">
+          <span class="hint-chip" onclick="fillHint(this)">Am I leaving my family protected?</span>
+          <span class="hint-chip" onclick="fillHint(this)">Who gets my RRSP?</span>
+          <span class="hint-chip" onclick="fillHint(this)">Show me my biggest risk</span>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
