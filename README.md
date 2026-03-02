@@ -1,5 +1,7 @@
 # Vesta: AI Estate Planning Assistant
 
+![Cover Image](images/cover-image.png)
+
 **Vesta** is an AI-native estate planning assistant that analyzes Canadian registered accounts — TFSA, RRSP, RRIF — for beneficiary designation gaps, outdated designations, and life event triggers like divorce or death. Built as a submission for **Wealthsimple's AI Builder role**, Vesta demonstrates how AI can surface what clients don't know they don't know — before it becomes their family's problem.
 
 The system runs a 30+ rule analysis engine against a client's account profile, identifies critical estate planning gaps, and explains the real legal and tax consequences in plain English through a conversational AI interface. A deliberate hard stop prevents the AI from executing any legal instructions — the decision always stays with the client.
